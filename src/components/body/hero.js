@@ -49,7 +49,8 @@ const Hero = () => {
           Non Fungible Tokens
         </h3>
         <h1 className="text-4xl md:text-8xl font-bold mt-4">
-          A new NFT <img src={Frame} alt="NFT" className="inline-block h-[4xl]" /> <br /> <img src={Frame1} alt="Experience" className="inline-block  h-[4xl]" />
+          A new NFT <img src={Frame} alt="NFT" className="inline-block h-auto sm:h-[4xl]" /> <br /> 
+          <img src={Frame1} alt="Experience" className="inline-block h-auto sm:h-[4xl]" />
           Experience
         </h1>
         <p className="text-lg mt-4 opacity-70">Discover, collect and sell</p>

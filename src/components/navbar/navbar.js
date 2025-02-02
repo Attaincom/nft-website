@@ -9,8 +9,15 @@ const Navbar = () => {
         <img src={Logo} alt="NFT Market Logo" className="h-8 w-auto" />
       </div>
 
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
+        <button id="menu-toggle" className="text-white focus:outline-none">
+          &#9776;
+        </button>
+      </div>
+
       {/* Navigation Links */}
-      <ul className="flex space-x-6 text-gray-400">
+      <ul id="menu" className="hidden md:flex space-x-6 text-gray-400 md:items-center">
         <li>
           <a href="#" className="hover:text-white">Auctions</a>
         </li>
@@ -23,10 +30,20 @@ const Navbar = () => {
         <li>
           <a href="#" className="hover:text-white">Community</a>
         </li>
+        
+        {/* Buttons in Mobile Menu */}
+        <div className="flex flex-col md:hidden space-y-4 mt-4">
+          <button className="border border-gray-400 px-4 py-2 rounded-lg text-gray-400 hover:text-white hover:border-white">
+            Contact
+          </button>
+          <button className="bg-indigo-600 px-4 py-2 rounded-lg text-white hover:bg-indigo-500">
+            My account
+          </button>
+        </div>
       </ul>
 
-      {/* Buttons */}
-      <div className="flex space-x-4">
+      {/* Buttons for Desktop */}
+      <div className="hidden md:flex space-x-4">
         <button className="border border-gray-400 px-4 py-2 rounded-lg text-gray-400 hover:text-white hover:border-white">
           Contact
         </button>
@@ -39,3 +56,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// Add the following script in your app's main file or useEffect hook for menu toggle
+// document.getElementById('menu-toggle').addEventListener('click', () => {
+//   const menu = document.getElementById('menu');
+//   menu.classList.toggle('hidden');
+// });
